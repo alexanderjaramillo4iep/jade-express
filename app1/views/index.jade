@@ -2,13 +2,15 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
 
-  form(action="/users", method="get")
+  form(action="/users", method="post")
     .form-group
       label(for="email") Correo Electrónico
       input#email.form-control(type="email", name="email")
     .form-group
       label(for="password") Contraseña
       input#password.form-control(type="password", name="password")
+    .form-group
+      label(for="password2") Contraseña
+      input#password2.form-control(type="password", name="password2")
     button(type="submit") Enviar
